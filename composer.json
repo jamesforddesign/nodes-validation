@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "laravel/framework": ">=5.1.0 <6.15.0",
-        "nodes/core": "1.1.*"
+        "laravel/framework": "^9.0",
+        "nodes/core": "dev-php-8-1"
     },
     "autoload": {
         "psr-4": {
@@ -33,5 +33,10 @@
                 "Nodes\\Validation\\ServiceProvider"
             ]
         }
+    },
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/jamesforddesign/core"
     }
+    ]
 }
