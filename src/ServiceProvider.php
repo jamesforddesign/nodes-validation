@@ -28,6 +28,10 @@ class ServiceProvider extends IlluminateServiceProvider
             // Retrieve namespace of validator
             $customValidator = config('nodes.validation.validator');
 
+            if(is_null($customValidator)){
+                $customValidator = Validator::class;
+            }
+
             // Instantiate validator
             $validator = new $customValidator($translator, $data, $rules, $messages);
 
