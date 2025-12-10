@@ -19,7 +19,7 @@ trait Color
      * @param  array  $paramters
      * @return bool
      */
-    protected function validateHexcolor($attribute, $value, $paramters)
+    public function validateHexcolor($attribute, $value, $paramters)
     {
         return (bool) preg_match('/^#?[a-fA-F0-9]{3,6}$/', $value);
     }

@@ -19,7 +19,7 @@ trait International
      * @param  array  $parameters
      * @return bool
      */
-    protected function validateBic($attribute, $value, $parameters)
+    public function validateBic($attribute, $value, $parameters)
     {
         // Use provided regex or use fallback
         $pattern = ! empty($parameters[0]) ? $parameters[0] : '/^[A-Za-z]{4,} ?[A-Za-z]{2,} ?[A-Za-z0-9]{2,} ?([A-Za-z0-9]{3,})?$/';
@@ -37,7 +37,7 @@ trait International
      * @param  array  $parameters
      * @return bool
      */
-    protected function validateIban($attribute, $value, $parameters)
+    public function validateIban($attribute, $value, $parameters)
     {
         // Since IBAN's has different lengths depending on which country
         // the IBAN it comes from. We unfortunately needs this rather ugly
@@ -103,7 +103,7 @@ trait International
      * @param  array  $parameters
      * @return bool
      */
-    protected function validateIsbn($attribute, $value, $parameters)
+    public function validateIsbn($attribute, $value, $parameters)
     {
         // Prepare value for validation
         $value = str_replace([' ', '-', '‐', '.'], '', $value);
@@ -131,7 +131,7 @@ trait International
      * @param  array  $parameters
      * @return bool
      */
-    protected function validateIsbn10($attribute, $value, $parameters)
+    public function validateIsbn10($attribute, $value, $parameters)
     {
         // Prepare value for validation
         $value = str_replace([' ', '-', '‐', '.'], '', $value);
@@ -172,7 +172,7 @@ trait International
      * @param  array  $parameters
      * @return bool
      */
-    protected function validateIsbn13($attribute, $value, $parameters)
+    public function validateIsbn13($attribute, $value, $parameters)
     {
         // Prepare value for validation
         $value = str_replace([' ', '-', '‐', '.'], '', $value);

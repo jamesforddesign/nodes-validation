@@ -19,7 +19,7 @@ trait Auth
      * @param  array  $parameters
      * @return bool
      */
-    protected function validateUsername($attribute, $value, $parameters)
+    public function validateUsername($attribute, $value, $parameters)
     {
         // Use provided regex or use fallback
         $pattern = ! empty($parameters[0]) ? $parameters[0] : '/^([a-zA-Z0-9._-])+$/i';

@@ -131,7 +131,6 @@ abstract class AbstractValidator
      * @author Morten Rugaard <moru@nodes.dk>
      *
      * @return bool
-     * @throws \Nodes\Validation\Exceptions\ValidationException
      */
     public function validateOrFail()
     {
