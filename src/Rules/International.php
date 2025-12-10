@@ -123,15 +123,8 @@ trait International
 
     /**
      * Validate ISBN10 number (International Standard Book Number).
-     *
-     * @author Morten Rugaard <moru@nodes.dk>
-     *
-     * @param  string $attribute
-     * @param  string $value
-     * @param  array  $parameters
-     * @return bool
      */
-    public function validateIsbn10($attribute, $value, $parameters)
+    public function validateIsbn10($attribute, $value)
     {
         // Prepare value for validation
         $value = str_replace([' ', '-', '‐', '.'], '', $value);
@@ -164,15 +157,8 @@ trait International
 
     /**
      * Validate ISBN13 number (International Standard Book Number).
-     *
-     * @author Morten Rugaard <moru@nodes.dk>
-     *
-     * @param  string $attribute
-     * @param  string $value
-     * @param  array  $parameters
-     * @return bool
      */
-    public function validateIsbn13($attribute, $value, $parameters)
+    public function validateIsbn13($attribute, $value)
     {
         // Prepare value for validation
         $value = str_replace([' ', '-', '‐', '.'], '', $value);
