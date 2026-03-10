@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "laravel/framework": "^11.0",
-        "nodes/core": "dev-laravel-shift-2025"
+        "laravel/framework": "^11.0|^12.0",
+        "nodes/core": "dev-laravel-12-update"
     },
     "autoload": {
         "psr-4": {
